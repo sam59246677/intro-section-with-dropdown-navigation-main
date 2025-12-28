@@ -1,39 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+  <header>
+    <div>
+      <img src="./images/logo.svg" alt="header logo">
+    </div>
+    <div class="overlay"></div>
+    <div>
+      <img src="./images/icon-menu.svg" alt="menu icon" class="icon-menu" id="menu-toggle-icon">
+      <div class="header-links">
+        <div class="features-container">
+          <p class="features">
+            Features
+            <img src="./images/icon-arrow-down.svg" alt="" class="down-arrow">
+          </p>
+          <div class="link-dropdown">
+            <a href="#"><img src="./images/icon-todo.svg" alt="">Todo List</a>
+             <a href="#"><img src="./images/icon-calendar.svg" alt="">Calender</a>
+             <a href="#"><img src="./images/icon-reminders.svg" alt="">Reminders</a>
+            <a href="#"><img src="./images/icon-planning.svg" alt="">Planning</a>
+          </div>
+        </div>
+        <div class="company-container">
+          <p class="company">Company
+            <img src="./images/icon-arrow-down.svg" alt="" class="down-arrow">
+          </p>
+          <div class="link-dropdown">
+            <a href="#">History</a>
+            <a href="#">Our Team</a>
+            <a href="#">Blog</a>
+          </div>
+        </div>
+        <a href="#" class="career">Careers</a>
+        <a href="#" class="about">About</a>
+        <div class="login-register">
+          <a href="#">Login</a>
+          <a href="#" class="register">Register</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+      <section class="section-one">
+        <picture class="hero-img">
+  <source srcset="./images/image-hero-desktop.png" media="(min-width: 1024px)">
 
-  Features
-  Company
-  Careers
-  About
-
-  Login
-  Register
-
-  Make remote work
-
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
-
-  Learn more
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <img src="./images/image-hero-mobile.png" alt="An image of a boy holding a laptop">
+</picture>
+      </section>
+      <section class="section-two">
+        <h1>Make remote work</h1>
+        <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+        <div class="learn-more"><a href="#">Learn more</a></div>
+       <div class="sponsors">
+       <div> <img src="./images/client-databiz.svg" alt="databiz logo"></div>
+        <div><img src="./images/client-audiophile.svg" alt="audiophile logo"></div>
+        <div><img src="./images/client-meet.svg" alt="meet logo"></div>
+        <div><img src="./images/client-maker.svg" alt="maker logo"></div>
+      </div>
+      </section>
+    </body>
+  </main>
+<div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener">Frontend
+      Mentor</a>.
+    Coded by <a href="https://onwuli-charles.netlify.app" target="_blank" rel="noopener">Onwuli Charles</a>.
   </div>
+  <script src="script.js"></script>
 </body>
 </html>

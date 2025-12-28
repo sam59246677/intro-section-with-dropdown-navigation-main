@@ -1,0 +1,233 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+     font-family: "Epilogue", sans-serif;
+}
+:root{
+   --grey-50: hsl(0, 0%, 98%);
+   --grey-500:hsl(0, 0%, 41%);
+   --grey-950:hsl(0, 0%, 8%);
+}
+body{
+    margin-top: 20px;
+}
+header{
+    margin: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    color: var(--grey-500);
+    font-size: 0.9rem;
+}
+.icon-menu{
+    position: relative;
+    z-index: 3;
+    cursor: pointer;
+}
+.header-links{
+display: flex;
+flex-direction: column;
+gap: 15px;
+    background-color: var(--grey-50);
+    position: fixed;
+  top: 0;
+  padding: 70px 0 0 20px;
+  height: 100%;
+  width: 65%;
+  right: -65%;
+  z-index: 2;
+  transition: right 0.3s ease-in-out; /* to enable the smooth sliding effect */
+}
+.header-links.is-open {
+  right: 0; /* to bring the menu onto the screen */
+}
+.features, .company, .link-dropdown a{
+    cursor: pointer;
+}
+.down-arrow{
+    margin-left: 5px;
+}
+.link-dropdown{
+    display: none;
+}
+.link-dropdown:not(.collapsed){
+ margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 20px;
+}
+.link-dropdown img{
+    margin-right: 10px;
+}
+.link-dropdown a, .career, .about{
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--grey-500);
+}
+.login-register{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.login-register a{
+    cursor: pointer;
+   text-decoration: none;
+    color: var(--grey-500);
+}
+.register{
+padding: 10px 50px;
+    border: 2px solid var(--grey-500);
+    border-radius: 13px;
+}
+.register:hover{
+    background-color: var(--grey-950);
+    color: var(--grey-50);
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1; /* Must be below the menu (2) */
+  opacity: 0; /* hidden at first*/
+  pointer-events: none; /* Allows clicks to go through when hidden */
+  transition: opacity 0.3s ease-in-out;
+}
+.overlay.is-open {
+  opacity: 1; /* Show when menu is open */
+  pointer-events: auto; /* Trap clicks when visible */
+}
+.section-one img{
+    width: 100%;
+}
+h1{
+    text-align: center;
+    margin: 20px 5px 10px;
+    color: var(--grey-950);
+    font-size: 2.2rem;
+}
+.section-two p{
+    margin: 0 auto 20px;
+    text-align: center;
+    color: var(--grey-500);
+    font-size: 0.9rem;
+    font-weight: 500;
+    max-width: 300px;
+    line-height: 20px;
+}
+.learn-more{
+    text-align: center;
+    margin-top: 25px;
+}
+.section-two a{
+    text-decoration: none;
+    color: var(--grey-50);
+    cursor: pointer;
+    background-color: var(--grey-950);
+    padding: 10px 20px;
+border-radius: 13px;
+font-weight: 500;
+}
+.section-two a:hover{
+    color: var(--grey-950);
+    background-color: var(--grey-500);
+}
+.sponsors{
+    margin: 40px 0 90px;
+     display: flex;
+    justify-content: space-around;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+@media(min-width:1020px){
+    .icon-menu, .overlay{
+  display: none;
+}
+header{
+    align-items: center;
+    margin-top: 20px;
+    justify-content: unset;
+    gap: 200px;
+}
+.header-links{
+flex-direction:row;
+    background-color: transparent;
+    position: relative;
+ padding-top: 0;
+ right: 20%;
+ font-size: 1rem;
+ align-items: center;
+ gap: 50px;
+ }
+ .features, .company{
+    min-width:max-content;
+    position: relative;
+ }
+  .link-dropdown{
+position: absolute;
+ padding: 20px;
+background-color: var(--grey-50);
+border-radius: 10px;
+text-align: center;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+ }
+ .features-container .link-dropdown{
+   left: -55px;
+ }
+.company-container .link-dropdown{
+   left: 140px;
+ }
+
+ .login-register {
+    flex-direction: row;
+   align-items: center;
+ margin-left: 90%;
+ gap:20px;
+ }
+ .register{
+    padding: 15px;
+ }
+ main{
+    display: flex;
+    gap:50px;
+    margin: 0 80px;
+ }
+ .section-two{
+    order: 1; /*this is to make the section-two appear first chronologically*/
+    margin-top: 120px;
+    min-width: 50%;
+    margin-left: 70px;
+}
+h1{
+    max-width: 480px;
+    font-size: 4.5rem;
+    text-align: left;
+    margin-left: 0;
+}
+.section-two p{
+    max-width: 430px;
+    font-size: 1rem;
+    text-align: left;
+    margin: 15px 0 30px 0;
+}
+.learn-more{
+    text-align: left;
+}
+.section-two a {
+    padding: 15px 30px;
+    font-size: 1rem;
+}
+ .section-one{
+    order: 2;
+ }
+ .hero-img img{
+    width: auto;
+    height: 500px;
+ }
+}
